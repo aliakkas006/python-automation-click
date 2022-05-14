@@ -1,27 +1,16 @@
-import pyautogui as pag
+import pyautogui
 import time
 import pyperclip
 
-icon = (951 , 1063)
-newProf = (1594 , 153)
-proxy = (132 , 240)
-conType = (485 , 164)
-http = (473 , 250)
-ipPort = (530 , 253)
-crt = (1796 , 679)
-selectAll = (414 , 153)
-action = (621 , 149)
-startSelectedProfile = (750 , 171)
-
-it = 6
+it = 20
 cnt = 10
 start = it*cnt
 end = start+cnt
-filename = "demo.txt"
+filename = "demo1.txt"
 j = 0
 f = open(filename, "r")
 
-pag.click(icon)
+pyautogui.click(951 , 1063)
 time.sleep(0.5)
 
 for i in range((start), (end)):
@@ -34,29 +23,25 @@ for i in range((start), (end)):
     ip = f.readline()
 
     pyperclip.copy(ip)
-    pag.click(newProf)
+    pyautogui.click(1594 , 153)
+    time.sleep(0.5)
+    pyautogui.click(132 , 240)
+    time.sleep(0.5)
+    pyautogui.click(485 , 164)
+    time.sleep(0.5)
+    pyautogui.click(473 , 250)
+    time.sleep(0.5)
+    pyautogui.click(530 , 253)
+    time.sleep(0.5)
+    pyautogui.hotkey('ctrl', 'v')
+    time.sleep(0.5)
+    pyautogui.click(1796 , 679)
     time.sleep(0.5)
 
-    pag.click(proxy)
-    time.sleep(0.5)
 
-    pag.click(conType)
-    time.sleep(0.5)
-
-    pag.click(http)
-    time.sleep(0.5)
-
-    pag.click(ipPort)
-    time.sleep(0.5)
-
-    pag.hotkey('ctrl', 'v')
-    time.sleep(0.5)
-    pag.click(crt)
-    time.sleep(0.5)
-
-pag.click(selectAll)
+pyautogui.click(414 , 153)
 time.sleep(0.7)
-pag.click(action)
+pyautogui.click(621 , 149)
 time.sleep(0.7)
-pag.click(startSelectedProfile)
+pyautogui.click(750 , 171)
 time.sleep(0.7)
