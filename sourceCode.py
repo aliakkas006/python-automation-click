@@ -2,11 +2,11 @@ import pyautogui
 import time
 import pyperclip
 
-it = 20
+it = 0
 cnt = 10
 start = it*cnt
 end = start+cnt
-filename = "demo1.txt"
+filename = "demo.txt"
 j = 0
 f = open(filename, "r")
 
@@ -40,8 +40,8 @@ for i in range((start), (end)):
 
 
 pyautogui.click(414 , 153)
-time.sleep(0.7)
+time.sleep(0.5)
 pyautogui.click(621 , 149)
-time.sleep(0.7)
+time.sleep(0.5)
 pyautogui.click(750 , 171)
-time.sleep(0.7)
+time.sleep(0.5)
